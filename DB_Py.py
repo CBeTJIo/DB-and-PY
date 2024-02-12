@@ -6,8 +6,8 @@ def create_db(conn):
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS users(
         id SERIAL PRIMARY KEY,
-        first_name VARCHAR(20) NOT NULL UNIQUE,
-        last_name VARCHAR(20) NOT NULL UNIQUE,
+        first_name VARCHAR(20) NOT NULL,
+        last_name VARCHAR(20) NOT NULL,
         email TEXT NOT NULL UNIQUE,
         phones VARCHAR(40));
     """)
